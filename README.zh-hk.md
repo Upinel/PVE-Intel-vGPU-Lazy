@@ -1,5 +1,5 @@
-[![en-GB](https://img.shields.io/badge/lang-en--gb-green.svg)](https://github.com/Upinel/PVE-Intel-vGPU/blob/main/README.md)
-[![zh-HK](https://img.shields.io/badge/lang-zh--hk-blue.svg)](https://github.com/Upinel/PVE-Intel-vGPU/blob/main/README.zh-hk.md)  
+[![en-GB](https://img.shields.io/badge/lang-en--gb-green.svg)](https://github.com/Upinel/PVE-Intel-vGPU-Lazy/blob/main/README.md)
+[![zh-HK](https://img.shields.io/badge/lang-zh--hk-blue.svg)](https://github.com/Upinel/PVE-Intel-vGPU-Lazy/blob/main/README.zh-hk.md)
 # Intel Gen 12/13 代 vGPU (SR-IOV) 在 Proxmox 的一鍵安裝腳本（測試版）
 *本README以英文版為準*
 此自動安裝器旨在幫助您虛擬化第 12 代英特爾集成 GPU (iGPU)，並將其作為具有硬件加速和視頻編解碼能力的虛擬 GPU (vGPU) 與多個虛擬機共享。
