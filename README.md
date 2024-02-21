@@ -32,6 +32,7 @@ Before proceeding, ensure the following:
 • VT-d (IOMMU) and SR-IOV are enabled in BIOS.  
 • Proxmox Virtual Environment (VE) version 8.1.4 or newer is **installed with GRUB bootloader**.  
 • EFI is **enabled**, and Secure Boot is **disabled**.  
+**IMPORTANT: If any of them you are unsure, back to the manual guide at [Upinel/PVE-Intel-vGPU](https://github.com/Upinel/PVE-Intel-vGPU)**
 
 ## Proxmox Setup
 SSH into your Proxmox Host as root, and execute:  
