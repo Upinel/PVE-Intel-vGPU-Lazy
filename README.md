@@ -13,7 +13,7 @@ I also assume you had enough knowledge to handle any possibly issues during the 
 I highly recommend use manual install guide at [Upinel/PVE-Intel-vGPU](https://github.com/Upinel/PVE-Intel-vGPU) if ever possible. Again, Use at your own risk.  
 
 ### Environment
-The environment used for this guide:  
+The environment I used for this guide:  
 • Model: Intel NUC12 Pro Wall Street Canyon (NUC12WSKi5)  
 • CPU: Intel 12th Gen i5 1240P (12 Cores, 16 Threads)  
 • RAM: 64GB DDR4 by Samsung  
