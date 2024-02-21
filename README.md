@@ -34,7 +34,7 @@ Before proceeding, ensure the following:
 • EFI is **enabled**, and Secure Boot is **disabled**.  
 **IMPORTANT: If any of them you are unsure, back to the manual guide at [Upinel/PVE-Intel-vGPU](https://github.com/Upinel/PVE-Intel-vGPU)**
 
-## Proxmox Setup
+## Proxmox vGPU Install
 SSH into your Proxmox Host as root, and execute:  
 ```bash
 cd ~
