@@ -3,14 +3,14 @@ This Auto Installer is designed to help you virtualize the 12th-generation Intel
 
 ### Introduction
 
-Although not suited for gaming due to the limited performance of Intel’s iGPU, especially when shared among multiple VMs, this setup excels at video decoding tasks like streaming YouTube and accelerating RDP sessions without burdening the CPU.
+Although not suited for gaming due to the limited performance of Intel’s iGPU, especially when shared among multiple VMs, this setup excels at video decoding tasks like streaming YouTube and accelerating RDP sessions without burdening the CPU.  
 Once you complete this setup, consider enhancing your RDP experience with my project [UpinelBetterRDP](https://github.com/Upinel/BetterRDP), which leverages vGPU capabilities.
 
 ### WARNING & Disclaimer
 
-This is a **highly experimental** One-Click Lazy Autoinstaller version of [Upinel/PVE-Intel-vGPU](https://github.com/Upinel/PVE-Intel-vGPU) and only suitable for Fresh Installation copy of Proxmox 8.1.4 or newer, which means **No Important Data** on the Proxmox Server. This workaround is not officially supported by Proxmox. Use at your own risk.
-I also assume you had enough knowledge to handle any possibly issues during the usage.
-I highly recommend use manual install guide at [Upinel/PVE-Intel-vGPU](https://github.com/Upinel/PVE-Intel-vGPU) if ever possible. Again, Use at your own risk.
+This is a **highly experimental** One-Click Lazy Autoinstaller version of [Upinel/PVE-Intel-vGPU](https://github.com/Upinel/PVE-Intel-vGPU) and only suitable for Fresh Installation copy of Proxmox 8.1.4 or newer, which means **No Important Data** on the Proxmox Server. This workaround is not officially supported by Proxmox. Use at your own risk.  
+I also assume you had enough knowledge to handle any possibly issues during the usage.  
+I highly recommend use manual install guide at [Upinel/PVE-Intel-vGPU](https://github.com/Upinel/PVE-Intel-vGPU) if ever possible. Again, Use at your own risk.  
 
 ### Credits
 
@@ -20,21 +20,21 @@ Additionally, Derek Seaman and Michael's blog post was an inspirational resource
 This installer is tailored for Proxmox 8, aiming to streamline the installation process. 
 
 ### Environment
-The environment used for this guide:
-• Model: Intel NUC12 Pro Wall Street Canyon (NUC12WSKi5)
-• CPU: Intel 12th Gen i5 1240P (12 Cores, 16 Threads)
-• RAM: 64GB DDR4 by Samsung
-• Storage: 2TB Samsung 980 Pro NVMe SSD and 4TB Samsung 870 Evo SATA SSD
-• Graphics: Intel Iris Xe Graphics (80 Execution Units)
+The environment used for this guide:  
+• Model: Intel NUC12 Pro Wall Street Canyon (NUC12WSKi5)  
+• CPU: Intel 12th Gen i5 1240P (12 Cores, 16 Threads)  
+• RAM: 64GB DDR4 by Samsung  
+• Storage: 2TB Samsung 980 Pro NVMe SSD and 4TB Samsung 870 Evo SATA SSD  
+• Graphics: Intel Iris Xe Graphics (80 Execution Units)  
 
 ### Prerequisites
-Before proceeding, ensure the following:
-• VT-d (IOMMU) and SR-IOV are enabled in BIOS.
-• Proxmox Virtual Environment (VE) version 8.1.4 or newer is **installed with GRUB bootloader**.
-• EFI is **enabled**, and Secure Boot is **disabled**.
+Before proceeding, ensure the following:  
+• VT-d (IOMMU) and SR-IOV are enabled in BIOS.  
+• Proxmox Virtual Environment (VE) version 8.1.4 or newer is **installed with GRUB bootloader**.  
+• EFI is **enabled**, and Secure Boot is **disabled**.  
 
 ## Proxmox Setup
-SSH into your Proxmox Host as root, and execute:
+SSH into your Proxmox Host as root, and execute:  
 ```bash
 cd ~
 git clone https://github.com/Upinel/PVE-Intel-vGPU-Lazy
@@ -44,7 +44,7 @@ chmod +x *.sh
 ```
 **As easy as that. Now your host is well prepared, and you can set up Windows 10/11 VMs with SR-IOV vGPU support.**
 
-(Optional) If you have an older version of Proxmox, you may want to use the following one-click script to update the kernel, but again, **that means you are possilbly not using this script on fresh installation**, use at your own risk:
+(Optional) If you have an older version of Proxmox, you may want to use the following one-click script to update the kernel, but again, **that means you are possilbly not using this script on fresh installation**, use at your own risk:  
 ```bash
 ./upgrade_kernel.sh
 ```
