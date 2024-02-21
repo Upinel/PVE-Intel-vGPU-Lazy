@@ -25,7 +25,7 @@ The environment I used for this guide:
 • BIOS 中啟用了 VT-d (IOMMU) 和 SR-IOV。  
 • 已安裝帶有 **GRUB 啟動加載器**的 Proxmox 虛擬環境（VE）版本 8.1.4 或更新版本。  
 • 已**啟用 EFI**，並**禁用**了 Secure Boot。  
-**重要提示**：如果您對其中任何一項不確定，請回到手動指南 [Upinel/PVE-Intel-vGPU](https://github.com/Upinel/PVE-Intel-vGPU)**
+**重要提示**：如果您對其中任何一項不確定，請回到手動指南 [Upinel/PVE-Intel-vGPU](https://github.com/Upinel/PVE-Intel-vGPU)
 
 ## Proxmox vGPU DKMS 安裝
 以 root 身份 SSH 進入您的 Proxmox 主機，並執行： 
