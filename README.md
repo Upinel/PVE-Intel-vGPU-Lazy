@@ -8,7 +8,7 @@ Once you complete this setup, consider enhancing your RDP experience with my pro
 
 ### WARNING & Disclaimer
 
-This is a **{\color{red}highly experimental}** One-Click Lazy Autoinstaller version of [Upinel/PVE-Intel-vGPU](https://github.com/Upinel/PVE-Intel-vGPU) and only suitable for Fresh Installation copy of Proxmox 8.1.4 or newer, which means **No Important Data** on the Proxmox Server. This workaround is not officially supported by Proxmox. Use at your own risk.
+This is a **highly experimental** One-Click Lazy Autoinstaller version of [Upinel/PVE-Intel-vGPU](https://github.com/Upinel/PVE-Intel-vGPU) and only suitable for Fresh Installation copy of Proxmox 8.1.4 or newer, which means **No Important Data** on the Proxmox Server. This workaround is not officially supported by Proxmox. Use at your own risk.
 I also assume you had enough knowledge to handle any possibly issues during the usage.
 I highly recommend use manual install guide at [Upinel/PVE-Intel-vGPU](https://github.com/Upinel/PVE-Intel-vGPU) if ever possible. Again, Use at your own risk.
 
