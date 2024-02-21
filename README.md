@@ -4,7 +4,7 @@ This Auto Installer is designed to help you virtualize the 12th-generation Intel
 ### Introduction
 
 Although not suited for gaming due to the limited performance of Intel’s iGPU, especially when shared among multiple VMs, this setup excels at video decoding tasks like streaming YouTube and accelerating RDP sessions without burdening the CPU.  
-Once you complete this setup, consider enhancing your RDP experience with my project [UpinelBetterRDP](https://github.com/Upinel/BetterRDP), which leverages vGPU capabilities.
+Once you complete this setup, consider enhancing your RDP experience with my project [Upinel/BetterRDP](https://github.com/Upinel/BetterRDP), which leverages vGPU capabilities.
 
 ### WARNING & Disclaimer
 

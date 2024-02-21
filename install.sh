@@ -1,6 +1,6 @@
 #!/bin/sh
 echo "+----------------------------------------------------------------------+"
-echo "| Intel Gen 12/13 vGPU SR-IOV on Proxmox Host Enabler (Step 2)         |"
+echo "| Intel Gen 12/13 vGPU SR-IOV on Proxmox Host Enabler (Installer)      |"
 echo "| https://github.com/Upinel/Intel-vGPU-SRIOV-on-Proxmox                |"
 echo "+----------------------------------------------------------------------+"
 echo "| This source file is subject to version 2.0 of the Apache license,    |"
