@@ -30,6 +30,11 @@ The environment I used for this guide:
 ## Proxmox vGPU DKMS 安裝
 以 root 身份 SSH 進入您的 Proxmox 主機，並執行： 
 ```bash
+apt update -y
+apt install git pve-headers-$(uname -r) mokutil dkms build-* sysfsutils unzip -y
+```
+Install:  
+```bash
 cd ~
 git clone https://github.com/Upinel/PVE-Intel-vGPU-Lazy
 cd ~/PVE-Intel-vGPU-Lazy

@@ -25,13 +25,11 @@ if [[ $kernel_version < $target_version ]]; then
 fi
 
 # Clean up
-apt update && apt install git pve-headers pve-headers-$(uname -r) mokutil -y
+
 rm -rf /var/lib/dkms/i915-sriov-dkms*
 rm -rf /usr/src/i915-sriov-dkms*
 rm -rf ~/i915-sriov-dkms
 KERNEL=$(uname -r); KERNEL=${KERNEL%-pve}
-
-apt install git dkms build-* unzip -y
 
 cd ~/PVE-Intel-vGPU-Lazy/i915-sriov-dkms
 cp -a ~/PVE-Intel-vGPU-Lazy/i915-sriov-dkms/dkms.conf{,.bak}
@@ -39,8 +37,6 @@ sed -i 's/"@_PKGBASE@"/"i915-sriov-dkms"/g' ~/PVE-Intel-vGPU-Lazy/i915-sriov-dkm
 sed -i 's/"@PKGVER@"/"'"$KERNEL"'"/g' ~/PVE-Intel-vGPU-Lazy/i915-sriov-dkms/dkms.conf
 sed -i 's/ -j$(nproc)//g' ~/PVE-Intel-vGPU-Lazy/i915-sriov-dkms/dkms.conf
 cat ~/PVE-Intel-vGPU-Lazy/i915-sriov-dkms/dkms.conf
-
-apt install  dkms -y
 
 dkms add .
 cd /usr/src/i915-sriov-dkms-$KERNEL
@@ -54,7 +50,7 @@ echo "***  Enable IO-MMU on proxmox host       ***"
 echo "********************************************"
 # /etc/default/grub update
 cp -a /etc/default/grub{,.bak}
-sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="quiet"/GRUB_CMDLINE_LINUX_DEFAULT="quiet intel_iommu=on i915.enable_guc=3 i915.max_vfs=7"/g' /etc/default/grub
+sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="quiet"/GRUB_CMDLINE_LINUX_DEFAULT="quiet intel_iommu=on iommu=pt i915.enable_guc=3 i915.max_vfs=7"/g' /etc/default/grub
 
 echo ""
 echo "    Update grub .... "
@@ -64,7 +60,6 @@ pve-efiboot-tool refresh
 
 echo ""
 echo "    Install sysfsutils ,set sriov_numvfs=7"
-apt install sysfsutils -y
 echo "devices/pci0000:00/0000:00:02.0/sriov_numvfs = 7" > /etc/sysfs.conf
 
 echo ""

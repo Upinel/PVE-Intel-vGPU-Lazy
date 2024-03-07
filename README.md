@@ -32,6 +32,11 @@ Before proceeding, ensure the following:
 ## Proxmox vGPU Install
 SSH into your Proxmox Host as root, and execute:  
 ```bash
+apt update -y
+apt install git pve-headers-$(uname -r) mokutil dkms build-* sysfsutils unzip -y
+```
+Install:  
+```bash
 cd ~
 git clone https://github.com/Upinel/PVE-Intel-vGPU-Lazy
 cd ~/PVE-Intel-vGPU-Lazy
