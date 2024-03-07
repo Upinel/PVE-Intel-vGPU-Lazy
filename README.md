@@ -33,7 +33,7 @@ Before proceeding, ensure the following:
 SSH into your Proxmox Host as root, and execute:  
 ```bash
 apt update -y
-apt install git pve-headers-$(uname -r) mokutil dkms build-* sysfsutils unzip -y
+apt install git vim pve-headers-$(uname -r) mokutil dkms build-* sysfsutils unzip -y
 ```
 Install:  
 ```bash
@@ -44,7 +44,10 @@ chmod +x *.sh
 ./install.sh
 ```
 **As easy as that. Now your host is well prepared, and you can set up Windows 10/11 VMs with SR-IOV vGPU support.**
-
+You should see 7 vGPU now:  
+```bash
+lspci  | grep VGA
+```
 (Optional) If you have an older version of Proxmox, you may want to use the following one-click script to update the kernel, but again, **that means you are possilbly not using this script on fresh installation**, use at your own risk:  
 ```bash
 ./upgrade_kernel.sh

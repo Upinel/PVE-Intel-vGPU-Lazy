@@ -31,7 +31,7 @@ The environment I used for this guide:
 以 root 身份 SSH 進入您的 Proxmox 主機，並執行： 
 ```bash
 apt update -y
-apt install git pve-headers-$(uname -r) mokutil dkms build-* sysfsutils unzip -y
+apt install git vim pve-headers-$(uname -r) mokutil dkms build-* sysfsutils unzip -y
 ```
 Install:  
 ```bash
@@ -42,7 +42,10 @@ chmod +x *.sh
 ./install.sh
 ```
 **就這麼簡單。現在您的主機已準備就緒，您可以使用 SR-IOV vGPU 支援來設置 Windows 10/11 VM**
-
+You should see 7 vGPU now:  
+```bash
+lspci  | grep VGA
+```
 （可選）如果您有舊版本的 Proxmox，您可能希望使用以下一鍵腳本來更新內核，但是再次提醒，**這意味著您可能沒有在全新安裝上使用這個腳本**，風險自負： 
 ```bash
 ./upgrade_kernel.sh
