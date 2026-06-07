@@ -1,7 +1,7 @@
 #!/bin/sh
 echo "+----------------------------------------------------------------------+"
 echo "| Intel Gen 12/13 vGPU SR-IOV on Proxmox Host Enabler (Kernal Updater) |"
-echo "| https://github.com/Upinel/Intel-vGPU-SRIOV-on-Proxmox                |"
+echo "| https://github.com/Upinel/PVE-Intel-vGPU                             |"
 echo "+----------------------------------------------------------------------+"
 echo "| This source file is subject to version 2.0 of the Apache license,    |"
 echo "| that is bundled with this package in the file LICENSE, and is        |"
@@ -12,7 +12,8 @@ echo "| to obtain it through the world-wide-web, please send a note to       |"
 echo "| license@swoole.com so we can mail you a copy immediately.            |"
 echo "+----------------------------------------------------------------------+"
 echo "| Author: Nova Upinel Chow  <dev@upinel.com>                           |"
-echo "| Date:   20/Feb/2024                                                  |"
+echo "| Maintainer: Gloria (Nova's personal assistant)                       |"
+echo "| Updated: June 2026                                                   |"
 echo "+----------------------------------------------------------------------+"
 echo "Install Kernel Update"
 
